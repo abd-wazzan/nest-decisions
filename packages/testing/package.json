@@ -1,0 +1,64 @@
+{
+  "name": "@nest-decisions/testing",
+  "version": "0.0.0",
+  "description": "Deterministic mock provider and helpers for testing nest-decisions code.",
+  "keywords": [
+    "nestjs",
+    "testing",
+    "mock",
+    "decisions"
+  ],
+  "license": "MIT",
+  "author": "Abdulrahman Wazzan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abd-wazzan/nest-decisions.git",
+    "directory": "packages/testing"
+  },
+  "homepage": "https://github.com/abd-wazzan/nest-decisions/tree/main/packages/testing#readme",
+  "bugs": {
+    "url": "https://github.com/abd-wazzan/nest-decisions/issues"
+  },
+  "type": "commonjs",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.build.esm.json && node ../../scripts/esm-wrapper.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0 || ^12.0.0",
+    "@nestjs/core": "^10.0.0 || ^11.0.0 || ^12.0.0",
+    "reflect-metadata": "^0.1.13 || ^0.2.0",
+    "@nest-decisions/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@nest-decisions/core": "workspace:*"
+  }
+}

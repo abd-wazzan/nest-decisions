@@ -1,0 +1,25 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: A decision class and a test using `@nest-decisions/testing` is ideal. Do not paste real keys or personal data.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: "@nest-decisions/core, @nestjs/core, Node.js"
+      placeholder: "core 0.1.0, nest 11.2.7, node 22.12"
+    validations:
+      required: true

@@ -1,0 +1,63 @@
+{
+  "name": "@nest-decisions/provider-jev",
+  "version": "0.0.0",
+  "description": "Jev (TypeSafe System One) provider for nest-decisions. Direct TypeSafe or OpenRouter.",
+  "keywords": [
+    "nestjs",
+    "jev",
+    "typesafe",
+    "system-one",
+    "decisions",
+    "provider"
+  ],
+  "license": "MIT",
+  "author": "Abdulrahman Wazzan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abd-wazzan/nest-decisions.git",
+    "directory": "packages/provider-jev"
+  },
+  "homepage": "https://github.com/abd-wazzan/nest-decisions/tree/main/packages/provider-jev#readme",
+  "bugs": {
+    "url": "https://github.com/abd-wazzan/nest-decisions/issues"
+  },
+  "type": "commonjs",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.build.esm.json && node ../../scripts/esm-wrapper.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "@nest-decisions/core": "workspace:^"
+  },
+  "devDependencies": {
+    "@nest-decisions/core": "workspace:*"
+  }
+}

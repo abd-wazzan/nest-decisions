@@ -1,0 +1,17 @@
+{
+  "name": "example-support-desk",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "start": "node --import tsx src/main.ts"
+  },
+  "dependencies": {
+    "@nest-decisions/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@nest-decisions/testing": "workspace:*",
+    "@nest-decisions/provider-jev": "workspace:*"
+  }
+}
