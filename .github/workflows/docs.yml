@@ -36,7 +36,7 @@ jobs:
           # Project site (https://<owner>.github.io/nest-decisions/). For an organization root site
           # or a custom domain, set the repository variable DOCS_BASE to "/".
           DOCS_BASE: ${{ vars.DOCS_BASE || '/nest-decisions/' }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         if: github.event_name != 'pull_request'
         with:
           path: docs/.vitepress/dist
