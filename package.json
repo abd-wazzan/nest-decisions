@@ -28,7 +28,7 @@
     "@nestjs/platform-express": "^12.1.2",
     "@nestjs/platform-fastify": "^12.1.2",
     "@nestjs/testing": "^12.1.2",
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.6.5",
     "@types/supertest": "^7.2.1",
     "@vitest/coverage-v8": "^5.0.1",
     "reflect-metadata": "^0.2.2",
