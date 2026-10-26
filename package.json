@@ -21,7 +21,7 @@
     "release:dry": "pnpm build && DRY_RUN=1 node scripts/stage-publish.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.15",
+    "@biomejs/biome": "^2.6.2",
     "@changesets/cli": "^3.0.3",
     "@nestjs/common": "^12.1.2",
     "@nestjs/core": "^12.1.2",
@@ -30,14 +30,14 @@
     "@nestjs/testing": "^12.1.2",
     "@types/node": "^24.0.0",
     "@types/supertest": "^7.2.1",
-    "@vitest/coverage-v8": "^5.0.1",
+    "@vitest/coverage-v8": "^5.0.5",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.0",
     "rxjs": "^7.8.2",
     "supertest": "^7.3.0",
     "tsx": "^4.23.15",
-    "typescript": "^5.9.0",
+    "typescript": "^7.0.2",
     "vitepress": "^1.6.4",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.5"
   }
 }
